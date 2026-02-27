@@ -41,7 +41,7 @@ Do not submit directly to the main branch.
 ## Approved Tooling
 You may use any tools, frameworks, and platforms you are comfortable with.
 
-### AI and Build Tools
+### AI and Build Tools 
 - ChatGPT
 - Gemini
 - Copilot
@@ -50,12 +50,15 @@ You may use any tools, frameworks, and platforms you are comfortable with.
 - Higgsfield
 - Open-source libraries
 - Free trial tools where applicable
+Please note : you can use any tools that you are comfortable working with.
 
 ### Automation Platforms
 - n8n
 - Zapier
 - Make.com
 - GoHighLevel
+  
+Please note : you can use any tools that you are comfortable working with.
 
 You may also use mocked integrations where third-party platform limitations prevent a full live implementation. If you do so, you must clearly distinguish between what is real, what is simulated, and what would be required for production readiness.
 
@@ -66,7 +69,7 @@ You may also use mocked integrations where third-party platform limitations prev
 ## Option 1: AI Reel Generator Application for TikTok
 
 ### Objective
-Build an application that accepts a prompt and generates **video and image reels/posts** intended for TikTok publishing.
+Build an application that accepts a prompt and generates **video and image reels/posts** intended for TikTok reels.
 
 ### Functional Requirements
 Your application should include the following capabilities:
@@ -76,13 +79,11 @@ Allow a user to enter:
 - a text prompt
 - an optional style or theme
 - an output type:
-  - image reel
-  - video reel
+   - video reel and image reel
 
 #### 2. Media Generation
-Generate either:
-- image-based content
-- video-based content
+Generate 
+- video and image based content
 
 The output should aim to feel:
 - realistic
@@ -101,21 +102,9 @@ Include a dashboard that shows:
 #### 4. Reel Library
 Include a library or gallery view for previously generated content.
 
-#### 5. Upload Capability
-Allow upload of:
-- image
-- video
-- audio / voiceover
-
-#### 6. Voiceover Sync
-Include a method to attach voiceover and synchronize it with the video.
-
-This may be fully implemented or reasonably approximated within the timebox, provided your approach is clearly explained.
-
-#### 7. TikTok Publishing Flow
+#### 5. TikTok Publishing Flow
 Include either:
-- a real TikTok publish flow, or
-- a clearly documented simulated publish flow if live posting is blocked by platform limitations
+- a real TikTok publish flow.
 
 ### Context
 We do not expect a fully production-ready media engine in one hour. We are interested in how you scope, simplify, and connect the critical flow.
@@ -129,7 +118,6 @@ Build an automation that posts TikTok reels every **2 minutes**.
 
 The reels may be:
 - video reels
-- image-based reels
 
 ### Functional Requirements
 
@@ -150,19 +138,17 @@ Suggested columns:
 - Media URL
 - Media Type
 - Voiceover URL (optional)
-- Status
+- Status ["Posted", "Ready for Posting"]
 - Last Posted At
 
 #### 3. Fetch Logic
 Your automation should:
 - fetch the next available reel
-- determine whether it is video or image content
 - prepare it for posting
+- once the video is posted - change the status to "POSTED"
 
 #### 4. TikTok Post Action
 Use an API call or posting step to TikTok.
-
-If full live posting is not possible because of platform constraints, you may simulate the posting step. However, your workflow should still demonstrate how the real implementation would be structured.
 
 #### 5. Status Update
 After each attempt, update the Google Sheet with:
@@ -213,20 +199,6 @@ Include a README that explains:
 ## 4. Setup Instructions
 Provide clear local setup or testing instructions.
 
-## 5. Demo Evidence
-Include at least one of the following:
-- screenshots
-- a short Loom/demo video
-- sample execution notes
-
----
-
-# Recommended Submission README Structure
-Please keep your submission README concise and practical.
-
-## Project Summary
-A short summary of what you built.
-
 ## Stack Used
 Frontend, backend, automation platform, APIs, services, and tools used.
 
@@ -236,36 +208,6 @@ Step-by-step instructions.
 ## Assumptions / Limitations
 What was mocked, skipped, or constrained by external platform limitations.
 
-## Next Steps
-What you would improve with more time.
-
----
-
-# Evaluation Criteria
-
-## 1. Technical Judgment
-Did you choose the right scope and tools for a 1-hour build?
-
-## 2. Execution
-Did you ship a meaningful working solution within the time limit?
-
-## 3. Architecture and Organization
-Is the project or workflow structured clearly and maintainably?
-
-## 4. Product Thinking
-Did you understand the intended user flow and build toward it?
-
-## 5. Integration Ability
-Did you connect key systems effectively?
-
-## 6. Communication
-Is the README and explanation clear and professional?
-
-## 7. Seniority Signals
-Do your decisions reflect ownership, pragmatism, and sound engineering judgment?
-
----
-
 # Important Notes
 - Select **one** option only
 - Prioritize the **core workflow**
@@ -273,8 +215,6 @@ Do your decisions reflect ownership, pragmatism, and sound engineering judgment?
 - Clearly label anything mocked or incomplete
 - Do not optimize for polish over functionality
 - We value clarity and execution over feature volume
-
----
 
 ## Final Note
 This examination is intended to reflect a real-world, time-constrained delivery scenario.
